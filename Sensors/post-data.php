@@ -1,47 +1,33 @@
 <?php
 $servername = "localhost";
-
-// REPLACE with your Database name
 $dbname = "test";
-// REPLACE with Database user
 $username = "root";
-// REPLACE with Database user password
 $password = "";
 
-// Keep this API Key value to be compatible with the ESP32 code provided in the project page.
-// If you change this value, the ESP32 sketch needs to match
 $api_key_value = "tPmAT5Ab3j7F9";
 
-$api_key= $sensor = $location = $value1 = $value2 = $value3 = "";
+// $api_key = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["api_key"]);
     if($api_key == $api_key_value) {
-        $value1 = test_input($_POST["value1"]);
-
-        // Create connection
+        $id = test_input($_POST["id"]);
         $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
-        $sql = "INSERT INTO SensorData (value1)
-        VALUES ('" . $value1 . "')";
-
-        if ($conn->query($sql) === TRUE) {
+        $sql = "INSERT INTO SensorData (id) VALUES ('$id')";
+        if ($conn->query($sql)) {
             echo "New record created successfully";
         }
         else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-
         $conn->close();
     }
     else {
         echo "Wrong API Key provided.";
     }
-
 }
 else {
     echo "No data posted with HTTP POST.";
