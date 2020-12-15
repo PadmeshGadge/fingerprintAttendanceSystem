@@ -1,9 +1,9 @@
-<?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = 'Staff Area'; ?>
+<?php require_once('../../../private/initialize.php'); ?>
+<?php $page_title = 'Check Attendance'; ?>
 <?php include(SHARED_PATH.'/header.php'); ?>
     <navigation>
       <ul>
-        <li><a href="index.php">Menu</a></li>
+        <li><a href="<?php echo WWW_ROOT.'/staff/index.php' ?>" >Menu</a></li>
       </ul>
     </navigation>
 
