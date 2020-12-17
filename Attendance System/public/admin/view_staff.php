@@ -1,21 +1,10 @@
-<?php require_once('../../private/initialize.php'); ?>
-<?php $page_title = 'Admin Area'; ?>
-<?php include(SHARED_PATH.'/header.php'); ?>
-    <navigation>
-      <ul>
-        <li><a href="index.php">Menu</a></li>
-      </ul>
-    </navigation>
-
-    <div id="content">
-      <form method="post">
-        <input type="submit" name="view-staff" value="VIEW STAFF" />
-        <input type="submit" name="edit-staff" value="EDIT STAFF" />
-        <input type="submit" name="add-subject" value="ADD/ASSIGN SUBJECT" />
-      </form>
-
 <?php
-  if(array_key_exists('view-staff',$_POST)){
+  function view(){
+    $servername = "localhost";
+    $dbname = "attend_sys";
+    $username = "root";
+    $password = "";
+    $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -42,12 +31,9 @@
                     <td>' . $row_br . '</td>
                   </tr>';
           }
-      }
-    $result->free();
     }
+    $result->free();
   }
+  mysqli->close();
+}
 ?>
-</div>
-<div id="bottom" >
-  <?php include(SHARED_PATH.'/footer.php'); ?>
-</div>

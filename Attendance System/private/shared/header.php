@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Attendance</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo WWW_ROOT .'/stylesheets/style.css' ?>" >
+    <link rel="stylesheet" type="text/css" href="<?php echo WWW_ROOT.'/stylesheets/style.css' ?>" />
   </head>
   <body>
     <header>
