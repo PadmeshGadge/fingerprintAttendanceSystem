@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2020 at 05:33 PM
+-- Generation Time: Dec 17, 2020 at 05:33 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -40,18 +40,18 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`Attended`, `Total_lec`, `Stud_ID`, `Branch_ID`, `Subject_ID`) VALUES
-(5, 7, 1, 'CS', 'CSC701'),
-(5, 10, 1, 'CS', 'CSC702'),
-(6, 10, 2, 'CS', 'CSC702'),
-(4, 7, 2, 'CS', 'CSC701'),
-(5, 8, 1, 'CS', 'CSC703'),
-(4, 8, 2, 'CS', 'CSC703'),
-(7, 8, 3, 'CS', 'CSC703'),
-(6, 8, 4, 'CS', 'CSC703'),
-(4, 7, 4, 'CS', 'CSC701'),
-(6, 10, 4, 'CS', 'CSC702'),
-(7, 7, 3, 'CS', 'CSC701'),
-(9, 10, 3, 'CS', 'CSC702');
+(2, 2, 1, 'CS', 'CSC701'),
+(0, 0, 1, 'CS', 'CSC702'),
+(0, 0, 2, 'CS', 'CSC702'),
+(2, 2, 2, 'CS', 'CSC701'),
+(0, 0, 1, 'CS', 'CSC703'),
+(0, 0, 2, 'CS', 'CSC703'),
+(0, 0, 3, 'CS', 'CSC703'),
+(0, 0, 4, 'CS', 'CSC703'),
+(1, 2, 4, 'CS', 'CSC701'),
+(0, 0, 4, 'CS', 'CSC702'),
+(1, 2, 3, 'CS', 'CSC701'),
+(0, 0, 3, 'CS', 'CSC702');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`Name`, `Total_lec`, `Subject_ID`, `Branch_ID`) VALUES
-('DSP_teacher', 0, 'CSC701', 'CS'),
+('DSP_teacher', 2, 'CSC701', 'CS'),
 ('MCC_teacher', 0, 'CSC702', 'CS'),
 ('AR_teacher', 0, 'CSC703', 'CS');
 
