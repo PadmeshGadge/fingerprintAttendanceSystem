@@ -3,15 +3,15 @@
 <?php include(SHARED_PATH.'/header.php'); ?>
     <navigation>
       <ul>
-        <li><a href="index.php">Menu</a></li>
+        <li><a href="../index.php">Logout</a></li>
       </ul>
     </navigation>
 
     <div id="content">
       <form method="post">
-        <input type="submit" name="view-staff" value="VIEW STAFF" />
-        <input type="submit" name="edit-staff" value="EDIT STAFF" />
-        <input type="submit" name="add-subject" value="ADD/ASSIGN SUBJECT" />
+        <input class="btn" type="submit" name="view-staff" value="VIEW STAFF" />
+        <input class="btn" type="submit" name="edit-staff" value="EDIT STAFF" />
+        <input class="btn" type="submit" name="add-subject" value="ADD/ASSIGN SUBJECT" />
       </form>
 
 <?php
@@ -48,6 +48,6 @@
   }
 ?>
 </div>
-<div id="bottom" >
+<div class="foot" >
   <?php include(SHARED_PATH.'/footer.php'); ?>
 </div>

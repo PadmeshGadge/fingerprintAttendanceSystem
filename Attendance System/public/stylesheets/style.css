@@ -10,16 +10,16 @@ body {
 }
 
 header {
-  height: 40px;
+  height: 60px;
   margin: 0 0 10px 0;
   padding: 0;
-  background: #0055DD;
+  background: #2980b9;
   color: white;
 }
 
 header h1 {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-size: 20px;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   text-align: center;
@@ -43,16 +43,23 @@ nav ul li {
 }
 
 #content {
-  min-height: 200px;
-  padding: 0 30px;
+  min-height: 550px;
+  /* padding: 0 30px; */
 }
 
 footer {
   height: 20px;
-  margin: 0 0 10px 0;
+  /* margin: 0 0 10px 0; */
   padding: 20px;
-  background: #0055DD;
+  background: #2980b9;
   color: white;
+}
+
+.foot{
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Actions */
@@ -66,18 +73,20 @@ footer {
 
 table {
   border-collapse: collapse;
+  margin: auto;
+  margin-top: 20px;
   vertical-align: top;
 }
 
-table.list {
-  width: 100%;
+table {
+  width: 80%;
 }
 
-table.list tr td {
-  border: 1px solid #999999;
+table tr td {
+  border: 5px solid #999999;
 }
 
-table.list tr th {
+table tr th {
   border: 1px solid #0055DD;
   background: #0055DD;
   color: white;
@@ -121,4 +130,22 @@ dd {
 .errors ul {
   margin-bottom: 0;
   padding-left: 1em;
+}
+button, .btn{
+  background:#2ecc71;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:16px;
+  font-weight:800;
+  font-size:0.8em;
+}
+button:hover, .btn:hover{
+  background:#2CC06B;
 }

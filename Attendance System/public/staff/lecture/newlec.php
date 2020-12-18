@@ -3,17 +3,17 @@
 <?php include(SHARED_PATH.'/header.php'); ?>
     <navigation>
       <ul>
-        <li><a href="<?php echo WWW_ROOT.'/staff/index.php' ?>" >Menu</a></li>
+        <li><a href="<?php echo WWW_ROOT.'/staff/index.php' ?>" >Back</a></li>
       </ul>
     </navigation>
 
     <div id="content">
       <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-        <label for="branch">Branch</label> <input type="text" name="branch" value="CS" />       <!--change this with drop down-->
-        <label for="name">Name</label> <input type="text" name="name" value="DSP_teacher" />    <!--change this with drop down-->
-        <label for="subject">Subject</label> <input type="text" name="subject" value="CSC701" />    <!--change this with drop down-->
-        <input type="submit" name="start" value="Start" />
-        <input type="submit" name="done" value="Done" />
+        <label for="branch">Branch</label> <input type="text" name="branch" placeholder="CS" />       <!--change this with drop down-->
+        <label for="name">Name</label> <input type="text" name="name" placeholder="DSP_teacher" />    <!--change this with drop down-->
+        <label for="subject">Subject</label> <input type="text" name="subject" placeholder="CSC701" />    <!--change this with drop down-->
+        <input class="btn" type="submit" name="start" value="Start" />
+        <input class="btn" type="submit" name="done" value="Done" />
       </form>
 
 
@@ -97,4 +97,6 @@ from attendance as a, branch as b, subjects as s, students as st where s.id='$su
 }
 ?>
 </div>
-<?php include(SHARED_PATH.'/footer.php'); ?>
+<div class="foot">
+  <?php include(SHARED_PATH.'/footer.php'); ?>
+</div>

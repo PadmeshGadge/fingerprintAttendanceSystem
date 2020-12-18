@@ -3,7 +3,7 @@
 <?php include(SHARED_PATH.'/header.php'); ?>
     <navigation>
       <ul>
-        <li><a href="<?php echo WWW_ROOT.'/staff/index.php' ?>" >Menu</a></li>
+        <li><a href="<?php echo WWW_ROOT.'/staff/index.php' ?>" >Back</a></li>
       </ul>
     </navigation>
 
@@ -17,7 +17,6 @@
       <label for="subject"></label><input type="text" name="subject" value="CSC701" />
       <input type="submit" value="Submit">
     </form>
-    </div>
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -55,4 +54,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
   }
 ?>
-<!-- <?php include(SHARED_PATH.'/footer.php'); ?> -->
+
+</div>
+<div class="foot">
+  <?php include(SHARED_PATH.'/footer.php'); ?>
+</div>
